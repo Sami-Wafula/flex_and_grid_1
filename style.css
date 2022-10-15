@@ -1,0 +1,232 @@
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body{
+    background-color: #1f1d36;
+    color: white;
+}
+
+
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    display: grid;
+    width: 80%;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 25vh);
+    grid-template-areas: 
+        "one two three four"
+        "one five six seven"
+    ;
+    gap: 10px;
+}
+
+.profile{
+    grid-area: one;
+    background-color: #1c1f4a;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+}
+.profile .personal-details{
+    background-color: #5847eb;
+    height: 40%;
+    border-radius: 10px;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.personal-details>img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+.profile .time{
+    background-color: #1c1f4a;
+    border-radius: 10px;    
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.work{
+    grid-area: two;
+    background-color: #ff8c66;
+    background-image: url('./img/envelope.svg');
+}
+.work .work-details{
+    background-color: #1c1f4a;
+    border-radius: 10px;
+}
+.play{
+    grid-area: three;
+    background-color: #56c2e6;
+    background-image: url('./img/icon-play.svg');
+}
+.play-details{
+    background-color: #1c1f4a;
+    border-radius: 10px;
+}
+.study{
+    grid-area: four;
+    background-color: #ff5c7c;
+    background-image: url('./img/icon-study.svg');
+}
+.study-details{
+    background-color: #1c1f4a;
+    border-radius: 10px;
+}
+.exercise{
+    grid-area: five;
+    background-color: #4acf81;
+    background-image: url('./img/run.svg');
+}
+.exercise-details{
+    background-color: #1c1f4a;
+    border-radius: 10px;
+}
+.social{
+    grid-area: six;
+    background-color: #7536d3;
+    background-image: url('./img/chats.svg');
+}
+.social-details{
+    background-color: #1c1f4a;
+    border-radius: 10px;
+}
+.self-care{
+    grid-area: seven;
+    background-color: #f1c65b;
+    background-image: url('./img/icon-self-care.svg')
+}
+.self-care-details{
+    background-color: #1c1f4a;
+    border-radius: 10px;
+}
+
+/* CSS for item containers in grid */
+.holder{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 95% 3%;
+    background-blend-mode: multiply;
+}
+
+/* CSS for the items in the grid */
+.padded{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+    padding: 15px 10px;
+}
+.padded:hover{
+    background-color: #393c69;
+}
+
+/* CSS for the items-details top row */
+.details-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* details for icon */
+.details-row>img{
+    width: 30px;
+}
+
+/* CSS for the count of hours */
+.hour-count{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* CSS for grey text in web */
+.grayed{
+    color: #8a8ca2;
+    font-size: 14px;
+}
+
+
+/* **********************************************************
+*               MEDIA QUERIES for different screen sizes
+************************************************************** */
+@media screen and (max-width:767px) {
+    .container{
+        height: 100%;
+        width: 100%;
+        padding: 10px 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        gap: 15px;
+    }
+    .profile .personal-details{
+        background-color: #5847eb;
+        height: auto;
+        border-radius: 10px;
+        padding: 15px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        gap: 10px;
+    }
+    .profile .time{
+        background-color: #1c1f4a;
+        border-radius: 15px 10px;    
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        cursor: pointer;
+    }
+    .holder{
+        height: 100px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .padded{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+        padding: 15px 10px;
+        gap: 10px;
+    }
+    .hour-count{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: center;
+        gap: 10px;
+    }
+    .padded:hover{
+        background-color: #1c1f4a;
+    }
+}
