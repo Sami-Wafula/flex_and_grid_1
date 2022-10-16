@@ -8,4 +8,4 @@ Task 1 0f 2
 
 ##Link
 
-Please click here to view the live link
+Please click [here](https://sami-wafula.github.io/flex_and_grid_1/) to view the live link
